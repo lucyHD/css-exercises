@@ -3,31 +3,35 @@
   color: hsl(0, 100%, 50%);
 }
 
-.small-para {
-  font-size: 12px;
-}
-
 .para {
   font-size: 22px;
 }
 
-.confirm {
+.small-para {
+  font-size: 12px;
+}
+
+/* moved para up and small-para down, so rule order would make sure that small para is applied to the element with small para there */
+
+#confirm-button {
   background: green;
   color: white;
   font-size: 20px;
   font-weight: bold;
 } 
-
+/* id is more specific so will ovverule button class underneath */
 .button {
   background-color: #ffc0cb;
   color: black;
   font-size: 20px;
 }
 
-.child {
+.text.child {
   color: red;
   font-size: 14px;
 }
+/* adds the .text class selector so this is a chained selector - the element must have both .text and .child for it too apply
+it overrules the rule beneath has it has two classes, which is more specific than a type element and a class  */
 
 div.text {
   color: green;
